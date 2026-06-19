@@ -19,7 +19,6 @@ I launched Wireshark, selected my active network interface, and began a live pac
 
 <img width="1920" height="946" alt="packet_flow" src="https://github.com/user-attachments/assets/69f8c94a-2ce9-4e35-a6ed-66521e440f11" />
 
-
 ---
 
 ### Step 2: Isolating DNS Queries
@@ -31,6 +30,8 @@ To find the DNS traffic generated when my browser looked up domain names, I appl
   * I analyzed the **Standard query response** returned from the local DNS server (`192.168.0.1`).
   * **Key Finding:** The response successfully mapped the requested domain name to its corresponding IP address.
 
+<img width="1920" height="946" alt="dns_analysis" src="https://github.com/user-attachments/assets/5baf4727-ee62-43fa-8548-ade7b65c6d07" />
+
 ---
 
 ### Step 3: Analyzing Encrypted Web Traffic (HTTPS/TLS)
@@ -40,6 +41,8 @@ Because modern websites automatically encrypt data, typing a standard `http` fil
 * **Analysis:** 
   * **Handshake Identification:** I successfully isolated the **Client Hello** messages using TLSv1.3 and QUIC protocols to establish a secure connection with `www.google.com`.
   * **Data Confidentiality:** Subsequent packets are categorized as **Application Data**. The contents of the requests are completely encrypted, proving that an attacker sniffing this network segment cannot read the data passing through.
+
+<img width="1920" height="946" alt="tls_analysis_encryption" src="https://github.com/user-attachments/assets/900f7df0-b3c1-4bf0-80d2-6f11d5e219eb" />
 
 ---
 
