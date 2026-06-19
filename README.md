@@ -17,6 +17,9 @@ The goal of this project was to capture live network traffic from a local interf
 ### Step 1: Traffic Capture Setup
 I launched Wireshark, selected my active network interface, and began a live packet capture. To generate traffic for analysis, I performed standard web lookup activities by navigating to various domains in a web browser.
 
+<img width="1920" height="946" alt="packet_flow" src="https://github.com/user-attachments/assets/69f8c94a-2ce9-4e35-a6ed-66521e440f11" />
+
+
 ---
 
 ### Step 2: Isolating DNS Queries
